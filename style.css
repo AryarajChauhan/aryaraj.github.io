@@ -4,6 +4,7 @@ body {
   padding: 0;
   background: #f9f9f9;
   color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
@@ -13,13 +14,18 @@ header {
   text-align: center;
 }
 
-nav a {
+nav a, nav button {
   margin: 0 10px;
   color: #ddd;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
 }
 
-nav a:hover {
+nav a:hover,
+nav button:hover {
   color: white;
 }
 
@@ -41,4 +47,23 @@ footer {
   text-align: center;
   padding: 1em;
   background: #eee;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark header {
+  background: #111;
+}
+
+body.dark .project {
+  background: #2a2a2a;
+  box-shadow: none;
+}
+
+body.dark footer {
+  background: #111;
 }
